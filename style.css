@@ -38,11 +38,11 @@
 }
 
 .nav {
-    --nav-gap: 15px;
+    --nav-gap: 30px;
     padding: var(--nav-gap);
     position: fixed;
     flex-direction: column;
-    right: 5%;
+    right: 0%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: var(--nav-gap);
+    zoom: .6;
 }
 
 
@@ -69,12 +70,14 @@
 }
 
 .nav-link {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.562);
     border-radius: 50%;
     height: var(--nav-gap);
     margin-left: var(--nav-gap);
     transition: transform .1s;
     width: var(--nav-gap);
+    margin: 9px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.822);
 }
 
 .nav-link-selected {
