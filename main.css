@@ -148,24 +148,29 @@
     text-align: center;
 }
 
-.faq-sum {
+.FAQ {
     font: 20px "Lato", sans-serif;
+    left: 2%;
     text-align: left;
-    display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    position: fixed;
 }
 
 .faq-section {
+    display: flex;
+    flex-direction: row;
     background-color: black;
-    align-content: flex-end;
     color: white;
-    font: 20px "Lato", sans-serif;
 }
 
-.qna {}
+.faq-main {
+    width: 20%;
+    padding: 30px;
+    justify-content: center;
+}
+
+.qna {
+    width: 70%;
+}
 
 
 /* .dd-menu {
