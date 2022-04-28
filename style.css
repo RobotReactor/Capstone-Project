@@ -64,7 +64,9 @@
 
 .nav-label {
     color: rgb(255, 255, 255);
+    font-size: xx-large;
     font-weight: bold;
+    margin-right: 10px;
     opacity: 0;
     transition: opacity 1s;
 }
