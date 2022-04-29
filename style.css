@@ -11,18 +11,9 @@
     height: 100vh;
 }
 
-#Home {
-    background-color: black;
-}
-
-#About {
-    background-color: rgb(0, 0, 0);
-}
-
-#FAQ {
-    background-color: black;
-}
-
+#Home,
+#About,
+#FAQ,
 #Contact {
     background-color: black;
 }
@@ -56,7 +47,7 @@
 }
 
 
-/* This Is To Make SOmething Else Appear Or Not */
+/* This Is To Make Something ELSE Appear Or Not */
 
 .nav-link:hover~.nav-label {
     opacity: 1;
@@ -157,6 +148,17 @@
     background-repeat: no-repeat;
 }
 
+.fullscreen-bg3 {
+    /* filter: blur(5px);
+    -webkit-filter: blur(3px); */
+    height: 100vh;
+    background-image: url('images/dumbell_blk-wht.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .main-btn {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
@@ -206,8 +208,6 @@
     flex-direction: column;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-    text-align: center;
-    text-align: justify;
 }
 
 .about {
@@ -234,19 +234,28 @@
 
 .faq-section {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
-    width: 100%;
-    height: max-content;
-    background-color: black;
+    height: 100vh;
+    background-color: rgb(165, 165, 165);
     color: white;
-    padding: 23px;
 }
 
-.qna {
-    text-align: center;
-    font-size: larger;
-    width: 70%;
+.faq-main {
+    text-transform: uppercase;
+    width: 20%;
+    height: 300px;
+    background-color: #000000;
+}
+
+.questions {
+    width: 80%;
+    height: 300px;
+    background-color: #000000;
+}
+
+.answers {
+    display: none;
 }
 
 
