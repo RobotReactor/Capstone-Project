@@ -7,7 +7,7 @@ function activateNavigation() {
                     <a href="#${section.id}" class="nav-link"></a>
                     <span class="nav-label">${section.dataset.label}</span>
                 </div>
-            `;
+        `;
     });
 
     navContainer.classList.add("nav");
