@@ -7,34 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
 </head>
+<nav class="navi-sect">
+    <ul class="dd-list">
+        <li><a class="link-styles" href="login-page.html">Main Page</a></li>
+        <li><a class="link-styles" href="add-workouts.html">Add Workout</a></li>
+        <li><a class="link-styles" href="discover-page.html">View Trends</a></li>
+        <li><a class="link-styles" href="routine-page.html">Routine</a></li>
+    </ul>
+</nav>
 <header>
     <div class="starting-img"></div>
 </header>
 
 <body>
-
     <div class="section" id="home" data-label="Home">
-        <nav class="dd-menu">
-            <ul class="dd-list">
-                <li><a class="link-styles" href="login-page.html">Main Page</a></li>
-                <li><a class="link-styles" href="add-workouts.html">Add Workout</a></li>
-                <li><a class="link-styles" href="discover-page.html">View Trends</a></li>
-                <li><a class="link-styles" href="routine-page.html">Routine</a></li>
-            </ul>
-        </nav>
-        <div class="fullscreen-bg"></div>
-        <button class="main-btn" id="tClik">WorKit Information Page.</button>
-        <c class="main-quote"><q>Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.</q> – Arnold Schwarzenegger</p>
+        <section class="showcase">
+            <video src="images/Arnold.mp4" muted loop autoplay></video>
+            <div class="text-capt">
+                <h2>Lift. Heavy.</h2>
+                <h4>Shit.</h4>
+                <p class="main-quote"><q>Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.</q><br>– Arnold Schwarzenegger</p>
+                <button class="main-btn" id="tClik">Back To The Dashboard.</button>
+            </div>
+        </section>
+        <!-- <div class="fullscreen-bg"></div> -->
     </div>
 
     <div class="section" id="About" data-label="About The Project">
-        <div class="about-section fullscreen-bg2">
+        <section class="fullscreen-bg2"></section>
+        <div class="about-section">
             <div class="abt-text">
                 <h3 class="about" id="abt">About</h3>
                 <p class="about_info">This project is a work in progress by Maxwell Bourcier as a Capstone Project for Genspark. This project utilizes the knowledge gained from the Cohort in its entirety. This opprotunity has lead to growing as a programmer and becoming confident
@@ -45,53 +50,95 @@
     </div>
 
     <div class="section" id="FAQ" data-label="FAQ">
-        <div class="faq-section fullscreen-bg3">
+        <section class="fullscreen-bg3"></section>
+        <div class="faq-section">
             <div class="faq-header">
                 <div class="faq-main">Frequently Asked Questions.</div>
-                <div class="questions" id="ques">
-                    <p id="qtn1">Q: Why? </p>
-                    <p id="qtn2">Q: What Does It Do? </p>
-                    <p id="qtn3">Q: Database? </p>
-                    <p id="qtn4">Q: Will I Be Able to Use This Too? </p>
+                <ul class="questions" id="ques">
+                    <li><a id="qtn1" href="#FAQ" onclick="faqClicker(this.id)">Q: Why? </a></li>
+                    <li><a id="qtn2" href="#FAQ" onclick="faqClicker(this.id)">Q: What Does It Do? </a></li>
+                    <li><a id="qtn3" href="#FAQ" onclick="faqClicker(this.id)">Q: Database? </a></li>
+                    <li><a id="qtn4" href="#FAQ" onclick="faqClicker(this.id)">Q: Will I Be Able to Use This Too? </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="answers-section">
+            <section class="fullscreen-bg4"></section>
+            <div class="square-sect">
+                <div class="square-sub-sect" id="quote1">"If when you look in the mirror you don't see the perfect version of yourself, you better see the hardest working version of yourself."<br>- Chris Bumstead.
+                </div>
+                <div class="square-sub-sect" id="ans1">I always have my phone, but never have a notebook to record my workouts. This is my solution for that, while not having to use a boring notepad on the phone itself. Of course this exists already, but not to this extent.
+                </div>
+                <div class="square-sub-sect" id="ans2">The project's function is to let anyone quickly reference past workouts, store workout schedules into a database from an image, input your workout ones as an image (of a notebook or a screenshot of a workout in notes), compare numbers
+                    with previous weeks and see a trend develop as data is inserted. And ultimately give the user a site to go back to to collect, manipulate, view or whatever the user wishes. A window into the Database.
+                </div>
+                <div class="square-sub-sect" id="ans3">Yes. Using SQL through Microsoft SQL Management Studio, all information will be stored and accessed through there. This immediately allows for CRUD operations to be performed which is invaluable for data storage and manipulation with ease.
+                </div>
+                <div class="square-sub-sect" id="ans4">This project will begin as a singular user website, protected by password. But will allow for multiple users within the year!
                 </div>
             </div>
-
-            <div class="answers">
-                <p id="ans1">
-                    <strong>A:  </strong> I always have my phone, but never have a notebook to record my workouts. This is my solution for that, while not having to use a boring notepad on the phone itself. Of course this exists already, but not to this
-                    extent.
-                </p>
-                <p id="ans2">
-                    <strong>A:  </strong> The project's function is to let anyone quickly reference past workouts, store workout schedules into a database from an image, input your workout ones as an image (of a notebook or a screenshot of a workout in
-                    notes), compare numbers with previous weeks and see a trend develop as data is inserted. And ultimately give the user a site to go back to to collect, manipulate, view or whatever the user wishes. A window into the Database.
-                </p>
-                <p id="ans3">
-                    <strong>A:  </strong>Yes. Using SQL through Microsoft SQL Management Studio, all information will be stored and accessed through there. This immediately allows for CRUD operations to be performed which is invaluable for data storage
-                    and manipulation with ease.
-                </p>
-                <p id="ans4">
-                    <strong>A:  </strong> This project will begin as a singular user website, protected by password. But will allow for multiple users within the year!
-                </p>
-            </div>
         </div>
     </div>
-
-    <div class="section" id="Contact" data-label="Contact Me">
-        <div class="con">
-
-        </div>
-    </div>
-
 </body>
 
 <footer>
-
+    <div class="section" id="Contact" data-label="Contact Me">
+        <div class="foot-area">
+            <button class="contact-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact Me.</button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Contact Info</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"></label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Nice Message Goes Here!"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button id="submit-btn" type="button" data-bs-dismiss="modal" class="btn btn-primary">Submit Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
 <script src="navdots.js " language="JavaScript"></script>
 
 <script>
+    var answer = document.getElementById("quote1");
+    answer.style["display"] = "contents";
+
+    function faqClicker(clicked_id) {
+
+        if (clicked_id === "qtn1") {
+            answer.style["display"] = "none";
+            answer = document.getElementById("ans1");
+            answer.style["display"] = "contents";
+        } else if (clicked_id === "qtn2") {
+            answer.style["display"] = "none";
+            answer = document.getElementById("ans2");
+            answer.style["display"] = "contents";
+        } else if (clicked_id === "qtn3") {
+            answer.style["display"] = "none";
+            answer = document.getElementById("ans3");
+            answer.style["display"] = "contents";
+        } else if (clicked_id === "qtn4") {
+            answer.style["display"] = "none";
+            answer = document.getElementById("ans4");
+            answer.style["display"] = "contents";
+        }
+    }
 </script>
 
 </html>
