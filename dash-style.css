@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* outline: 2px solid red; */
+}
+
+.top-dock {
+    position: fixed;
+    z-index: 3;
+    background-color: rgb(177, 177, 177);
+    width: 100vw;
+    height: 45px;
+}
+
+.layout {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.app-name {
+    margin: 10px;
+    padding-left: 3px;
+    text-align: center;
+    font-size: larger;
+}
+
+.icon {
+    text-align: center;
+    zoom: .7;
+    font-size: 1.6rem;
+}
+
+.menu-button {
+    z-index: 2;
+    position: absolute;
+    width: 30px;
+    height: 26px;
+    left: 118px;
+}
+
+.sidebar {
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+    background-color: rgb(94, 94, 94);
+    width: 150px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+}
