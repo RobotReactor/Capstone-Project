@@ -4,7 +4,7 @@
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     /* outline: 2px solid rgb(9, 255, 0); */
     --background-color: rgb(207, 207, 207);
 }
@@ -32,7 +32,8 @@
 }
 
 .menu-btn-position {
-    width: 30px;
+    /* outline: 2px solid black; */
+    width: 65px;
     height: 30px;
     border-radius: 4px;
 }
@@ -66,20 +67,22 @@
 .icon {
     position: fixed;
     z-index: 4;
-    zoom: .7;
+    zoom: .43;
     width: 70px;
-    left: 127px;
-    top: -5px;
+    left: 278px;
+    top: 18px;
 }
 
 .menu-button {
+    /* outline: 2px solid black; */
     position: fixed;
     z-index: 4;
     cursor: pointer;
-    top: 10px;
-    left: 100px;
+    top: 45px;
+    left: 305px;
     width: 30px;
     height: 30px;
+    zoom: .43;
 }
 
 .main-screen {
@@ -87,17 +90,16 @@
     --container-gap: 1rem;
     --background-color: rgb(207, 207, 207);
     display: flex;
+    overflow-y: scroll;
     justify-content: left;
     flex-direction: column;
-    padding-right: 1.5rem;
-    padding-left: .5rem;
     top: 50px;
-    padding-top: .5rem;
-    gap: .5rem;
+    gap: calc(var(--container-gap) / 2);
     position: relative;
-    height: 100vh;
     left: var(--offset-pos);
     width: calc(100% - var(--offset-pos));
+    height: 100vh;
+    padding-bottom: calc(var(--container-gap) * 5);
     background-color: rgb(207, 207, 207);
     transition: all 1s;
 }
@@ -163,13 +165,12 @@
 
 .sidebar {
     position: fixed;
-    cursor: ew-resize;
     z-index: 2;
     background-color: rgb(248, 248, 248);
     top: 50px;
     left: 0;
     width: 0px;
-    height: calc(100% - 50px);
+    height: calc(100vh - 50px);
     transition: all 1s;
     box-shadow: 0px 5px 10px 8px rgba(0, 0, 0, 0.26);
     /* outline: 2px solid black; */
