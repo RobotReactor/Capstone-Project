@@ -39,13 +39,23 @@
 }
 
 .main-icon {
+    cursor: pointer;
     width: 30px;
     height: 30px;
     padding: 0px;
     margin: 0px;
     border-radius: 25px;
-    outline: 2px solid black;
+    outline: 2px solid rgb(0, 60, 255);
     margin-left: auto;
+}
+
+.main-icon:hover {
+    background-color: rgb(0, 60, 255);
+}
+
+.main-icon:active {
+    background-color: rgb(0, 255, 255);
+    outline: 2px solid rgb(0, 255, 255);
 }
 
 .app-name {
@@ -61,7 +71,7 @@
 
 .app-name:hover a {
     text-decoration: none;
-    color: rgb(122, 122, 122);
+    color: rgb(87, 87, 87);
 }
 
 .icon {
