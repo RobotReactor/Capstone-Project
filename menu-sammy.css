@@ -33,7 +33,7 @@ svg {
 
 .line {
     fill: none;
-    stroke: rgb(45, 87, 226);
+    stroke: rgb(0, 60, 255);
     stroke-width: 6px;
     stroke-linecap: round;
     stroke-linejoin: round;
