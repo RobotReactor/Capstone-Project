@@ -818,6 +818,15 @@
         transition: all 1s;
         top: -10px;
     }
+    .btn-notify {
+        outline: none;
+    }
+    .btn-quote {
+        outline: none;
+    }
+    .btn-language {
+        outline: none;
+    }
 }
 
 @media (max-width: 320px) {
