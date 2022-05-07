@@ -790,10 +790,11 @@
         flex-direction: column;
     }
     .big-section {
-        width: 90%;
+        width: 95%;
         flex-shrink: 1;
     }
     .nrml-section {
+        width: 95%;
         flex-shrink: 2;
     }
     .sidebar {
@@ -852,6 +853,7 @@
 
 @media (max-width: 320px) {
     * {
+        max-width: 320px;
         background-color: red;
     }
 }
