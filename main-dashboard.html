@@ -25,12 +25,6 @@
                 <i id="tog-sammy" class="fa fa-bars" aria-hidden="true"></i>
                 <i id="tog-x" class="fa fa-times" aria-hidden="true"></i>
             </div>
-            <div class="search">
-                <label>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input type="text" placeholder="Search here" />
-                </label>
-            </div>
             <div class="btn-section">
                 <div class="top-divider"></div>
                 <div class="btn-language" onclick="langSelect();" title="Change the Language">
@@ -67,8 +61,6 @@
                 <i id="tog-dwn" class="fa fa-angle-down" aria-hidden="true"></i>
                 <i id="tog-up" class="fa fa-angle-up" aria-hidden="true"></i>
             </div>
-            </i>
-        </div>
         </div>
     </header>
 
@@ -112,56 +104,56 @@
 
     <div id="sidebar" class="sidebar">
         <ul>
-            <li>
+            <li class="main-list-item">
                 <a class="main-anchor" href="#">
                     <span class="main-emblem"><img src="./images/main-emblem.png"/></span>
                     <span class="main-title">Wor::Cout</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-area-chart" aria-hidden="true"></i></span>
                     <span class="title">Dashboard</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-tasks" aria-hidden="true"></i></span>
                     <span class="title">Log Workout</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-file-text" aria-hidden="true"></i></span>
                     <span class="title">Add Workouts</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
                     <span class="title">Measurements</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item active">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-trophy" aria-hidden="true"></i></span>
                     <span class="title">Goals</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
                     <span class="title">Settings</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-question" aria-hidden="true"></i></span>
                     <span class="title">Help</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
+            <li class="list-item sign-out">
+                <a class="minor-anchor" href="#">
                     <span class="nav-icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                     <span class="title">Sign Out</span>
                 </a>
@@ -220,8 +212,6 @@
         info1.classList.toggle('active');
         info2.classList.toggle('active');
         btn.classList.toggle('active');
-        togSun.classList.toggle('active');
-        togMoon.classList.toggle('active');
     }
 
     function openSidebar() {

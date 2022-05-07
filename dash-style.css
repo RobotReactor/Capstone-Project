@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Lato&family=Permanent+Marker&family=Poppins:wght@300&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -76,26 +77,6 @@
     margin: 0px 10px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.search label {
-    position: relative;
-    width: 100%;
-}
-
-.search label input {
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    padding: 5px 20px;
-    padding-left: 40px;
-    outline: none;
-}
-
-.search label .fa {
-    position: absolute;
-    left: 15px;
-    top: 13px;
 }
 
 .user {
@@ -415,8 +396,8 @@
 }
 
 .main-screen.active {
-    left: 60px;
-    width: calc(100% - 60px);
+    left: 80px;
+    width: calc(100% - 80px);
 }
 
 .top-page-info {
@@ -437,6 +418,7 @@
     padding: calc(var(--container-gap) / 4);
     background-color: var(--background-color);
     width: 100%;
+    height: 100px;
     min-height: 100px;
     transition: all 1s;
 }
@@ -444,14 +426,17 @@
 .top-page-info.active {
     margin: 0px;
     padding: 0px;
+    top: -100px;
     min-height: 0px;
+    height: 0px;
     transition: all 1s;
 }
 
 .top-container.active {
-    min-height: 0px;
     margin: 0px;
     padding: 0px;
+    min-height: 0px;
+    height: 0px;
     transition: all 1s;
 }
 
@@ -588,34 +573,49 @@
     box-shadow: 0px 5px 10px 8px rgba(0, 0, 0, 0.26);
     transition: all 1s;
     overflow: hidden;
+    border-left: 10px solid white;
+    border-right: 15px solid rgb(136, 136, 136);
 }
 
 .sidebar.active {
-    width: 60px;
+    width: 80px;
 }
 
 .sidebar ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
     padding: 0px;
     width: 100%;
 }
 
-.sidebar ul li:nth-child(n+2) {
+.list-item:nth-child(n+2) {
     position: relative;
     gap: 1rem;
     width: 100%;
     list-style: none;
 }
 
-.sidebar ul li:nth-child(n+2):hover {
+.list-item:nth-child(n+2):hover {
     background-color: rgb(201, 201, 201);
 }
 
-.sidebar ul li a {
+.list-item:nth-child(n+2).active {
+    background-color: rgb(136, 136, 136);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.main-anchor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+}
+
+.minor-anchor {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -625,7 +625,7 @@
     color: rgb(56, 91, 209);
 }
 
-.sidebar ul li a .nav-icon {
+.minor-anchor .nav-icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -633,46 +633,84 @@
     height: 60px;
     line-height: 60px;
     text-align: center;
+    white-space: nowrap;
 }
 
-.sidebar ul li a .fa {
+.minor-anchor .fa {
     font-size: 24px;
 }
 
-.sidebar ul li a .title {
+.minor-anchor .title {
     font-family: 'Lato';
     color: rgb(56, 91, 209);
     font-weight: 800;
     position: relative;
-    display: block;
     padding: 0px 10px;
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
 }
 
-.sidebar ul li a img {
-    zoom: .1;
-}
-
-.sidebar ul li a .main-emblem {
-    height: 60px;
-    line-height: 60px;
-    width: 60px;
-    align-items: center;
-}
-
-.sidebar ul li a .main-title {
-    font-family: 'Lato';
-    color: rgb(46, 46, 46);
-    background-color: white;
-    font-weight: bolder;
+.main-emblem {
     position: relative;
     display: block;
-    font-size: x-large;
-    padding: 0px 40px;
+    min-width: 60px;
+    margin-top: 14px;
+    line-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.main-anchor img {
+    zoom: .09;
+    position: relative;
+    display: block;
+    min-width: 60px;
+    margin-top: 14px;
+    line-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.main-title {
+    font-family: 'Koulen';
+    margin-left: 20px;
+    color: rgb(100, 100, 100);
+    font-weight: 800;
+    font-size: xx-large;
+    position: absolute;
+    left: 60px;
+    display: block;
+    padding: 8px 10px;
     height: 60px;
-    width: 300px;
     line-height: 60px;
     white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+        z-index: 1000;
+    }
+    .sidebar.active {
+        left: -80px;
+        width: 80px;
+        z-index: 1000;
+    }
+    .main-screen.active {
+        width: calc(100%);
+        left: 0px;
+    }
+    .main-screen {
+        width: 100%;
+        left: 80px;
+    }
+    .top-dock {
+        width: 100%;
+        left: 80px;
+    }
+    .top-dock.active {
+        width: calc(100%);
+        left: 0px;
+    }
 }
