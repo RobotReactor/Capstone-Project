@@ -632,7 +632,7 @@
 .sidebar ul li a .title {
     font-family: 'Lato';
     color: rgb(56, 91, 209);
-    font-weight: 700;
+    font-weight: 800;
     position: relative;
     display: block;
     padding: 0px 10px;
@@ -653,9 +653,10 @@
 }
 
 .sidebar ul li a .main-title {
+    font-family: 'Lato';
     color: rgb(46, 46, 46);
     background-color: white;
-    font-weight: 700;
+    font-weight: bolder;
     position: relative;
     display: block;
     font-size: x-large;
