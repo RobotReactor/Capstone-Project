@@ -721,6 +721,10 @@
     color: black;
 }
 
+.replacable-section {
+    transition: all 1s;
+}
+
 @media (max-width: 992px) {
     .sidebar {
         width: 0px;
@@ -761,14 +765,23 @@
 }
 
 @media (max-width: 768px) {
-    .replacable-section {
-        width: 0px;
-    }
     .user {
         width: 40px;
         height: 40px;
         min-width: 40px;
         transition: all 1s;
+    }
+}
+
+@media (max-width: 640px) {
+    .replacable-section {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .replacable-section {
+        width: 0px;
     }
 }
 
