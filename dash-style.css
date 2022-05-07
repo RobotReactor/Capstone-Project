@@ -76,6 +76,8 @@
     position: relative;
     width: 400px;
     margin: 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .search label {
@@ -433,15 +435,22 @@
 
 .top-container {
     position: relative;
+    z-index: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     margin: calc(var(--container-gap) / 4);
     padding: calc(var(--container-gap) / 4);
     background-color: var(--background-color);
     width: 100%;
     min-height: 100px;
-    height: 100px;
+    transition: all 1s;
+}
+
+.top-container.active {
+    min-height: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: all 1s;
 }
 
 .br-crumb {

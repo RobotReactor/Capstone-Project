@@ -20,36 +20,36 @@
                 <i id="tog-sammy" class="fa fa-bars" aria-hidden="true"></i>
                 <i id="tog-x" class="fa fa-times" aria-hidden="true"></i>
             </div>
-            <!-- <div class="search">
+            <div class="search">
                 <label>
                     <i class="fa fa-search" aria-hidden="true"></i>
                     <input type="text" placeholder="Search here" />
                 </label>
-            </div> -->
+            </div>
             <div class="btn-section">
                 <div class="top-divider"></div>
-                <div class="btn-language" onclick="langSelect();">
+                <div class="btn-language" onclick="langSelect();" title="Change the Language">
                     <i class="fa fa-globe" aria-hidden="true"></i>
                 </div>
-                <div class="btn-quote" onclick="showQuote();">
+                <div class="btn-quote" onclick="showQuote();" title="Quote Someone">
                     <i class="fa fa-quote-right" aria-hidden="true"></i>
                 </div>
-                <div class="btn-notify" onclick="toggleNotifs();">
+                <div class="btn-notify" onclick="toggleNotifs();" title="Turn on Notifications">
                     <i class="fa fa-bell" aria-hidden="true"></i>
                 </div>
                 <div class="top-divider"></div>
             </div>
             <div class="btn-section">
                 <div class="top-divider"></div>
-                <div class="btn-toggle-dark-mode" onclick="toggleDark();">
+                <div class="btn-toggle-dark-mode" onclick="toggleDark();" title="Toggle Dark Mode">
                     <i id="toggle-sun" class="fa fa-sun-o" aria-hidden="true"></i>
                     <i id="toggle-moon" class="fa fa-moon-o" aria-hidden="true"></i>
                 </div>
-                <div class="btn-toggle-all-time" onclick="toggleCalendar();">
+                <div class="btn-toggle-all-time" onclick="toggleCalendar();" title="Change Time-Frame">
                     <i id="cal-week" class="fa fa-calendar-o" aria-hidden="true"></i>
                     <i id="cal-month" class="fa fa-calendar" aria-hidden="true"></i>
                 </div>
-                <div class="btn-units" onclick="toggleUnit();">
+                <div class="btn-units" onclick="toggleUnit();" title="Change Unit of Measurement">
                     <i class="fa fa-flask" aria-hidden="true"></i>
                 </div>
                 <div class="top-divider"></div>
@@ -202,8 +202,10 @@
 
     function openInfo() {
         let btn = document.querySelector('.drop-down');
+        let info = document.querySelector('.top-container');
         let togUp = document.querySelector('#tog-up');
         let togDwn = document.querySelector('#tog-dwn');
+        info.classList.toggle('active');
         btn.classList.toggle('active');
         togSun.classList.toggle('active');
         togMoon.classList.toggle('active');
