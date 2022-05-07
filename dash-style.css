@@ -598,6 +598,8 @@
 
 .list-item:nth-child(n+2):hover {
     background-color: rgb(201, 201, 201);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .list-item:nth-child(n+2).active {
@@ -723,27 +725,35 @@
 
 @media (max-width: 992px) {
     .sidebar {
-        width: 80px;
+        width: 0px;
+        left: -80px;
+        transition: all 1s;
         z-index: 100;
     }
     .sidebar.active {
         width: 80px;
+        left: 0px;
+        transition: all 1s;
         z-index: 100;
     }
     .main-screen.active {
         width: calc(100% - 80px);
+        transition: all 1.5s;
         left: 80px;
     }
     .main-screen {
-        width: calc(100% - 80px);
-        left: 80px;
+        width: calc(100%);
+        transition: all .5s;
+        left: 0px;
     }
     .top-dock {
-        width: calc(100% - 80px);
-        left: 80px;
+        width: calc(100%);
+        transition: all .5s;
+        left: 0px;
     }
     .top-dock.active {
         width: calc(100% - 80px);
+        transition: all 1.5s;
         left: 80px;
     }
     .main-title {
@@ -757,9 +767,9 @@
         width: 0px;
     }
     .user {
-        width: 25px;
-        height: 25px;
-        min-width: 25px;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
         transition: all 1s;
     }
 }
@@ -767,24 +777,30 @@
 @media (max-width: 480px) {
     .sidebar {
         z-index: 100;
+        transition: all 1s;
         left: -80px;
     }
     .main-screen {
         width: calc(100%);
+        transition: all 1s;
         left: 0px;
     }
     .top-dock {
         left: 0px;
+        transition: all 1s;
         width: 100%;
     }
     .sidebar.active {
         width: 100%;
+        transition: all 1s;
         left: 0px;
     }
     .main-screen.active {
+        transition: all 1.2s;
         left: 100%
     }
     .top-dock.active {
+        transition: all 1.2s;
         left: 100%;
     }
     .btn-toggle.active {
@@ -799,6 +815,7 @@
     }
     .main-emblem {
         left: 40%;
+        transition: all 1s;
         top: -10px;
     }
 }

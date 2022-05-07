@@ -217,6 +217,21 @@
         });
     }
 
+    const list = document.querySelectorAll('.list-item');
+
+    function activeLink() {
+        let toggle = document.querySelector('.btn-toggle');
+        list.forEach((item) =>
+            item.classList.remove('active'));
+        this.classList.add('active');
+        if (toggle.classList.contains('active')) {
+            openSidebar();
+        }
+
+    }
+    list.forEach((item) =>
+        item.addEventListener('click', activeLink));
+
     function toggleDark() {
         let btnB = document.querySelector('.btn-toggle-dark-mode');
         let togSun = document.querySelector('#toggle-sun');
