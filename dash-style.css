@@ -471,6 +471,7 @@
     color: gray;
     gap: 1rem;
     height: auto;
+    margin-top: auto;
 }
 
 .head-info h5 {
@@ -495,7 +496,7 @@
 
 #home {
     color: gray;
-    padding: 7px 16px;
+    padding: 4px 16px;
     text-decoration: none;
 }
 
