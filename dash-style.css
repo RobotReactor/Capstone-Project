@@ -421,14 +421,11 @@
 
 .top-page-info {
     background-color: var(--background-color);
+    font-size: 12px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: left;
-    box-shadow: none;
-    padding: 4px;
-    margin-right: auto;
-    zoom: .8;
+    padding: 5px;
+    min-height: 100%;
+    transition: all 1s;
 }
 
 .top-container {
@@ -441,6 +438,13 @@
     background-color: var(--background-color);
     width: 100%;
     min-height: 100px;
+    transition: all 1s;
+}
+
+.top-page-info.active {
+    margin: 0px;
+    padding: 0px;
+    min-height: 0px;
     transition: all 1s;
 }
 
@@ -467,6 +471,11 @@
     color: gray;
     gap: 1rem;
     height: auto;
+}
+
+.head-info h5 {
+    font-weight: 700;
+    margin-top: .25rem;
 }
 
 .bc-info {

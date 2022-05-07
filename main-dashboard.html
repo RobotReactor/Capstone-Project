@@ -78,7 +78,7 @@
                 <div class="bc-info">
                     <div class="head-info">
                         <i class="fa fa-building"></i>
-                        <h4 style="font-weight: 700; margin: 5px;">Main Dashboard</h4>
+                        <h5>Main Dashboard</h5>
                     </div>
                     <ul class="br-crumb">
                         <i id="home" class="fa fa-home"></i>
@@ -207,10 +207,12 @@
 
     function openInfo() {
         let btn = document.querySelector('.drop-down');
-        let info = document.querySelector('.top-container');
+        let info1 = document.querySelector('.top-container');
+        let info2 = document.querySelector('.top-page-info');
         let togUp = document.querySelector('#tog-up');
         let togDwn = document.querySelector('#tog-dwn');
-        info.classList.toggle('active');
+        info1.classList.toggle('active');
+        info2.classList.toggle('active');
         btn.classList.toggle('active');
         togSun.classList.toggle('active');
         togMoon.classList.toggle('active');
