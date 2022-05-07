@@ -11,9 +11,11 @@
 .top-dock {
     z-index: 2;
     position: relative;
+    display: flex;
+    justify-content: space-between;
     height: 60px;
-    width: calc(100% - 300px);
-    left: 300px;
+    width: calc(100% - 80px);
+    left: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +25,8 @@
 }
 
 .top-dock.active {
-    left: 60px;
-    width: calc(100% - 60px);
+    left: 300px;
+    width: calc(100% - 300px);
 }
 
 .btn-section {
@@ -87,6 +89,7 @@
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
+    transition: all 1s;
 }
 
 .user img {
@@ -113,7 +116,7 @@
     outline: 2px solid rgb(92, 92, 92);
     color: rgb(56, 91, 209);
     background-color: rgb(161, 161, 161);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-language:hover {
@@ -122,11 +125,10 @@
     outline: 2px solid rgb(146, 146, 146);
 }
 
-.btn-language.active {
-    transform: rotate(360deg);
+.btn-language:active {
     color: rgb(161, 161, 161);
     background-color: rgb(56, 91, 209);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-quote {
@@ -145,7 +147,7 @@
     outline: 2px solid rgb(92, 92, 92);
     color: rgb(56, 91, 209);
     background-color: rgb(161, 161, 161);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-quote:hover {
@@ -154,11 +156,10 @@
     outline: 2px solid rgb(146, 146, 146);
 }
 
-.btn-quote.active {
-    transform: rotate(360deg);
+.btn-quote:active {
     color: rgb(161, 161, 161);
     background-color: rgb(56, 91, 209);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-notify {
@@ -176,7 +177,7 @@
     outline: 2px solid rgb(92, 92, 92);
     color: rgb(56, 91, 209);
     background-color: rgb(161, 161, 161);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-notify:hover {
@@ -185,11 +186,10 @@
     outline: 2px solid rgb(146, 146, 146);
 }
 
-.btn-notify.active {
-    transform: rotate(360deg);
+.btn-notify:active {
     color: rgb(161, 161, 161);
     background-color: rgb(56, 91, 209);
-    transition: all 1s;
+    transition: all .1s;
 }
 
 .btn-toggle-dark-mode {
@@ -357,28 +357,28 @@
 }
 
 #tog-x {
-    display: contents;
+    display: none;
     transition: all 1s;
 }
 
 #tog-x.active {
-    display: none;
+    display: contents;
     transition: all 1s;
 }
 
 #tog-sammy {
-    display: none;
+    display: contents;
     transition: all 1s;
 }
 
 #tog-sammy.active {
-    display: contents;
+    display: none;
     transition: all 1s;
 }
 
 .main-screen {
     /* This Should Be 0px */
-    --offset-pos: 300px;
+    --offset-pos: 80px;
     --container-gap: 1rem;
     --background-color: rgb(207, 207, 207);
     display: flex;
@@ -396,8 +396,8 @@
 }
 
 .main-screen.active {
-    left: 80px;
-    width: calc(100% - 80px);
+    left: 300px;
+    width: calc(100% - 300px);
 }
 
 .top-page-info {
@@ -568,7 +568,7 @@
     /* This Should Be 0px */
     top: 0px;
     left: 0px;
-    width: 300px;
+    width: 80px;
     height: 100vh;
     box-shadow: 0px 5px 10px 8px rgba(0, 0, 0, 0.26);
     transition: all 1s;
@@ -578,7 +578,7 @@
 }
 
 .sidebar.active {
-    width: 80px;
+    width: 300px;
 }
 
 .sidebar ul {
@@ -659,6 +659,7 @@
     line-height: 60px;
     text-align: center;
     white-space: nowrap;
+    transition: all 1s;
 }
 
 .main-anchor img {
@@ -685,32 +686,125 @@
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
+    transition: all 1s;
+}
+
+.template-modal {
+    display: none;
+    position: fixed;
+    z-index: 50000000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+.modal-contents {
+    background-color: rgb(211, 211, 211);
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 1.7);
+}
+
+.closeModalBtn {
+    color: gray;
+    float: right;
+    font-size: 30px;
+}
+
+.closeModalBtn:hover,
+.closeBtn:focus {
+    cursor: pointer;
+    color: black;
 }
 
 @media (max-width: 992px) {
     .sidebar {
         width: 80px;
-        z-index: 1000;
+        z-index: 100;
     }
     .sidebar.active {
-        left: -80px;
         width: 80px;
-        z-index: 1000;
+        z-index: 100;
     }
     .main-screen.active {
-        width: calc(100%);
-        left: 0px;
+        width: calc(100% - 80px);
+        left: 80px;
     }
     .main-screen {
-        width: 100%;
+        width: calc(100% - 80px);
         left: 80px;
     }
     .top-dock {
-        width: 100%;
+        width: calc(100% - 80px);
         left: 80px;
     }
     .top-dock.active {
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+    .main-title {
+        opacity: 0;
+        transition: all 1s;
+    }
+}
+
+@media (max-width: 768px) {
+    .replacable-section {
+        width: 0px;
+    }
+    .user {
+        width: 25px;
+        height: 25px;
+        min-width: 25px;
+        transition: all 1s;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        z-index: 100;
+        left: -80px;
+    }
+    .main-screen {
         width: calc(100%);
         left: 0px;
+    }
+    .top-dock {
+        left: 0px;
+        width: 100%;
+    }
+    .sidebar.active {
+        width: 100%;
+        left: 0px;
+    }
+    .main-screen.active {
+        left: 100%
+    }
+    .top-dock.active {
+        left: 100%;
+    }
+    .btn-toggle.active {
+        position: relative;
+        z-index: 100000;
+        right: 90px;
+        transition: all 1s;
+    }
+    .main-title {
+        opacity: 0;
+        transition: all 1s;
+    }
+    .main-emblem {
+        left: 40%;
+        top: -10px;
+    }
+}
+
+@media (max-width: 320px) {
+    * {
+        background-color: red;
     }
 }
