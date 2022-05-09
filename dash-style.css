@@ -530,9 +530,6 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: blue;
     box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.178);
     height: calc(100% - var(--container-gap));
     width: 700px;
@@ -548,9 +545,6 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: rgb(255, 0, 0);
     box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.178);
     height: calc(100% - var(--container-gap));
     width: 300px;
